@@ -1,0 +1,40 @@
+package:
+  name: solprop_ml
+  version: 1.1
+
+source:
+  path: ../
+
+build:
+    noarch: python
+    number: '1'
+
+requirements:
+  host:
+    - python {{ python }}
+    - setuptools
+
+  run:
+    - python >=3.7
+    - matplotlib
+    - numpy
+    - pandas
+    - pytorch
+    - rdkit
+    - scikit-learn
+    - tensorboardX
+    - tqdm
+    - coolprop
+    - chemprop_solvation >=0.0.3
+
+test:
+  imports:
+    - solvation_predictor
+    - solvation_predictor.data
+    - solvation_predictor.features
+    - solvation_predictor.models
+    - solvation_predictor.solubility
+    - solvation_predictor.train
+
+about:
+    home: https://github.com/fhvermei/SolPropML
