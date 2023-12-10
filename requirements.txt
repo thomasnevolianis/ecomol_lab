@@ -2,3 +2,4 @@ dash
 pandas
 plotly
 seaborn
+rdkit-pypi
