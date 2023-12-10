@@ -1,0 +1,243 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+.app-header {
+    text-align: center;
+    padding: 20px;
+    background-color: #a9abad;
+}
+
+.app-footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #a9abad;
+}
+
+/* Editor and Settings Container */
+.editor-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.editor-and-settings-container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+/* Ketcher Iframe */
+#ketcher-frame {
+    width: 100%;
+    height: 500px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Settings Inputs and Labels */
+.settings-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    margin-bottom: 10px;
+}
+
+.input-style {
+    margin-left: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Dropdown Style */
+.dropdown-style .Select-control {
+    width: 60%;
+    margin: auto;
+}
+
+/* Button Style */
+.button-run-design {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Table Styling */
+.molecule-properties table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.molecule-properties th, .molecule-properties td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Ensuring Spider Chart Fits Well */
+.molecule-properties .dash-graph {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 80%;
+}
+
+/* Improved Table Header Styling */
+.molecule-properties th {
+    background-color: #a9abad;
+    color: white;
+}
+
+/* Zebra Striping for Rows */
+.molecule-properties tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover Effect for Rows */
+.molecule-properties tr:hover {
+    background-color: #ddd;
+}
+
+/* Style for 2D Images */
+.molecule-properties td img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Table Row Styling */
+.molecule-properties tr {
+    height: 80px; /* Adjust the height as needed */
+    padding: 5px; /* Reduce padding as needed */
+    height: 100px !important;
+}
+
+.molecule-properties td {
+    width: auto; /* Adjust the width as needed, or keep it 'auto' for automatic width */
+    overflow: hidden; /* Optional: to hide overflowed content */
+    text-overflow: ellipsis; /* Optional: to show ellipsis for overflowed content */
+    white-space: nowrap; /* Optional: to prevent text from wrapping to the next line */
+}
+
+.molecule-properties tbody tr {
+    height: 200px !important; /* Adjust as needed */
+}
+
+.molecule-properties td img {
+    max-height: 200px; /* Adjust to fit within the row height */
+    width: auto;
+}
+
+.molecule-properties .dash-graph {
+    max-height: 100px; /* Adjust for spider charts */
+}
+
+.molecule-properties .dash-graph {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;  /* Allow the container to adjust its height */
+    width: auto;   /* Allow the container to adjust its width */
+    max-height: 200px;  /* Adjust as needed */
+    max-width: 200px;   /* Adjust as needed */
+}
+
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+}
+
+.login-container {
+    width: 300px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-title {
+    margin-bottom: 20px;
+}
+
+.login-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+}
+
+.login-output {
+    margin-top: 10px;
+    color: red;
+}
+
+.app-header, .app-footer {
+    width: 100%;
+    text-align: center;
+    /* Additional styling as needed */
+}
+
+.login-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    /* Your existing styles */
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    /* Additional styling */
+}
+
+.app-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.app-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
