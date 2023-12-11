@@ -5,8 +5,8 @@ from rdkit.Chem.Draw import PrepareMolForDrawing
 from rdkit.Chem import rdDepictor
 rdDepictor.SetPreferCoordGen(True)
 
-from DescriptorCreator.reorder_atoms import get_atoms_in_order
-from DescriptorCreator.find_atoms import find_identical_atoms, find_identical_atoms_with_scores
+from backend.regio_ml.DescriptorCreator.reorder_atoms import get_atoms_in_order
+from backend.regio_ml.DescriptorCreator.find_atoms import find_identical_atoms, find_identical_atoms_with_scores
 from collections import defaultdict
 
 # Drawing Options

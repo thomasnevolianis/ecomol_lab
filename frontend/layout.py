@@ -5,7 +5,7 @@ login_layout = html.Div([
     html.Header([
         html.Img(src='/assets/logo.png', className='logo', style={'width': '100px', 'height': 'auto'}),
         html.H1("EcoMol Lab", className="header-title")
-    ], style={'textAlign': 'center'}, className="app-header"),
+    ], style={'display': 'flex', 'alignItems': 'center', 'justifyContent': 'center'}, className="app-header"),
 
     # Main login container
     html.Div([
@@ -15,7 +15,7 @@ login_layout = html.Div([
         html.Button('Login', id='login-button', n_clicks=0, className='login-button'),
         html.Div(id='login-output', className='login-output')
     ], className='login-container', style={'textAlign': 'center', 'marginTop': '50px', 'marginBottom': '50px'}),
-    html.H2("Unlock the true potential of molecular engineering."),
+    html.H2("Unlock the true potential of molecular engineering"),
     html.H3("Ask for a demo now at info@habersolutions.com"),
     # Footer
     html.Footer("© 2023 HABER Solutions - All rights reserved", className="app-footer", style={'textAlign': 'center'})
@@ -98,19 +98,20 @@ layout = html.Div([
     ], className="editor-container", id="editor-container", style={'display': 'flex', 'justify-content': 'center', 'align-items': 'center', 'margin-top': '20px'}),
 
     # Output for results (initially hidden)
-    html.Div(
+     html.Div(
         id='molecule-output-container',
         children=[
-            # Molecule properties table
+            # Plot Section
+            dcc.Graph(
+                id='molecule-plot',
+                style={'width': '100%', 'textAlign': 'center'}
+            ),
+
+            # Molecule Properties Table
             html.Div(
                 id='molecule-properties-table',
                 className='molecule-properties',
-                style={'width': '60%', 'float': 'left'}
-            ),
-            # Plot
-            dcc.Graph(
-                id='molecule-plot',
-                style={'width': '40%', 'float': 'right'}
+                style={'width': '100%', 'marginTop': '20px'}  # Full width for the table, with some margin at the top
             )
         ],
         style={'display': 'none'}

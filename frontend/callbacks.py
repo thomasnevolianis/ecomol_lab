@@ -68,10 +68,11 @@ def register_callbacks(app):
                 html.Th("Solubility"),
                 html.Th("Score"),
                 html.Th("Reactivity"),
-                html.Th("Synthetic Accessibility"),
+                html.Th("SA"),
+                html.Th("CAS"),
                 html.Th("Price (€)"),
                 html.Th("CO2/kg"),
-                html.Th("Spider Chart")
+                html.Th("Overall")
             ])]
             for mol in sorted_molecules:
                 image_src = smiles_to_image(mol["smiles"])
@@ -99,6 +100,7 @@ def register_callbacks(app):
                     html.Td(mol["score"], style={'background-color': get_color_for_property(mol["score"], False)}),
                     html.Td(mol["reactivity"]),
                     html.Td(mol["synthetic_accessibility"]),
+                    html.Td(mol["cas"]),
                     html.Td(mol["price_euro"], style={'background-color': get_color_for_property(mol["price_euro"])}),
                     html.Td(mol["co2_kg"], style={'background-color': get_color_for_property(mol["co2_kg"])}),
                     html.Td(spider_chart, style={'text-align': 'center'})

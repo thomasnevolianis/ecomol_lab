@@ -1,5 +1,5 @@
-from DescriptorCreator.DescriptorElement import DescriptorElement
-from DescriptorCreator.PartialChargeDict import PartialChargeDict as PCD
+from backend.regio_ml.DescriptorCreator.DescriptorElement import DescriptorElement
+from backend.regio_ml.DescriptorCreator.PartialChargeDict import PartialChargeDict as PCD
 import logging
 
 __author__ = 'modlab'

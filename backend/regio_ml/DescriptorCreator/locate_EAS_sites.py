@@ -2,7 +2,7 @@ import copy
 from rdkit import Chem
 from rdkit.Chem import AllChem
 
-from DescriptorCreator.find_atoms import remove_identical_atoms
+from backend.regio_ml.DescriptorCreator.find_atoms import remove_identical_atoms
 
 
 def locate_sites(pmol):

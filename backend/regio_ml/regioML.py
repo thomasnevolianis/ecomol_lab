@@ -65,6 +65,7 @@ if __name__ == "__main__":
     
     # Draw molecule
     result_svg = molsvg.generate_structure(smiles, [smiles], [reactivity_label], [pred_proba.tolist()], [atom_indices], args.observed)
+    print(reactivity_label)
     f_draw = open(f'{args.name}.svg','w')
     f_draw.write(result_svg)
     f_draw.close()

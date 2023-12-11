@@ -5,15 +5,15 @@ import datetime
 from rdkit import Chem
 from rdkit.Chem import AllChem
 
-from DescriptorCreator.locate_EAS_sites import locate_sites
-from DescriptorCreator.GraphChargeShell import GraphChargeShell
+from backend.regio_ml.DescriptorCreator.locate_EAS_sites import locate_sites
+from backend.regio_ml.DescriptorCreator.GraphChargeShell import GraphChargeShell
 
 # xTB path and calc setup
 path = os.getcwd()
-XTBHOME = os.path.join(path, 'dep/xtb-6.4.0')
-XTBPATH = os.path.join(path, 'dep/xtb-6.4.0/share/xtb')
-MANPATH = os.path.join(path, 'dep/xtb-6.4.0/share/man')
-LD_LIBRARY_PATH = os.path.join(path, 'dep/xtb-6.4.0/lib')
+XTBHOME = os.path.join(path, 'backend/regio_ml/dep/xtb-6.4.0')
+XTBPATH = os.path.join(path, 'backend/regio_ml/dep/xtb-6.4.0/share/xtb')
+MANPATH = os.path.join(path, 'backend/regio_ml/dep/xtb-6.4.0/share/man')
+LD_LIBRARY_PATH = os.path.join(path, 'backend/regio_ml/dep/xtb-6.4.0/lib')
 
 OMP_NUM_THREADS = '1'
 MKL_NUM_THREADS = '1'
@@ -55,7 +55,7 @@ class EASMolPreparation():
         """
         cwd = os.getcwd()
         SQMroot = cwd + '/' + str(datetime.datetime.now()).split(' ')[0] + '-charges-xtb_6.4.0-calculations-to-descriptors'
-        print(f'SQM folder is: \n{SQMroot}')
+        #print(f'SQM folder is: \n{SQMroot}')
         return SQMroot
 
 

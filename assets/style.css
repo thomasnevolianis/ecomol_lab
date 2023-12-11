@@ -91,15 +91,6 @@ body {
     vertical-align: middle;
 }
 
-/* Ensuring Spider Chart Fits Well */
-.molecule-properties .dash-graph {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-    width: 80%;
-}
-
 /* Improved Table Header Styling */
 .molecule-properties th {
     background-color: #a9abad;
@@ -124,48 +115,41 @@ body {
 
 /* Table Row Styling */
 .molecule-properties tr {
-    height: 80px; /* Adjust the height as needed */
-    padding: 5px; /* Reduce padding as needed */
     height: 100px !important;
 }
 
 .molecule-properties td {
-    width: auto; /* Adjust the width as needed, or keep it 'auto' for automatic width */
-    overflow: hidden; /* Optional: to hide overflowed content */
-    text-overflow: ellipsis; /* Optional: to show ellipsis for overflowed content */
-    white-space: nowrap; /* Optional: to prevent text from wrapping to the next line */
+    width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .molecule-properties tbody tr {
-    height: 200px !important; /* Adjust as needed */
+    height: 200px !important;
 }
 
 .molecule-properties td img {
-    max-height: 200px; /* Adjust to fit within the row height */
+    max-height: 200px;
     width: auto;
 }
 
+/* Style for Spider Charts in Cells */
 .molecule-properties .dash-graph {
-    max-height: 100px; /* Adjust for spider charts */
-}
-
-.molecule-properties .dash-graph {
+    height: 60px;  /* Set specific height */
+    width: 60px;   /* Set specific width */
+    overflow: hidden; /* Hide overflow */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto;  /* Allow the container to adjust its height */
-    width: auto;   /* Allow the container to adjust its width */
-    max-height: 200px;  /* Adjust as needed */
-    max-width: 200px;   /* Adjust as needed */
 }
-
-
+/* Login Page Styles */
 .login-page {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f2f2f2;
+    background-color: #f2f222;
 }
 
 .login-container {
@@ -208,36 +192,28 @@ body {
     color: red;
 }
 
-.app-header, .app-footer {
-    width: 100%;
-    text-align: center;
-    /* Additional styling as needed */
-}
-
-.login-page {
+/* Output Container Styles */
+#molecule-output-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
+    width: 100%;
 }
 
-.login-container {
-    /* Your existing styles */
-    width: 300px;
-    margin: auto;
-    padding: 20px;
-    /* Additional styling */
+/* Container for Plot */
+#plot-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.app-header {
-    position: absolute;
-    top: 0;
-    left: 0;
+/* Style for the Graph */
+#molecule-plot {
+    display: inline-block !important;
+    margin: auto !important;
 }
 
-.app-footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+/* Targeting the cells of the SMILES column */
+.molecule-properties td:nth-child(2) {
+    font-size: 10px;
 }
