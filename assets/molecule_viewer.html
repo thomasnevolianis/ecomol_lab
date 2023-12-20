@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3D Molecule Viewer</title>
+    <script src="https://3Dmol.org/build/3Dmol-min.js"></script>
+</head>
+<body>
+    <div style="height: 400px; width: 600px; position: relative;" id="viewer"></div>
+    <script>
+        var viewer;
+        document.addEventListener("DOMContentLoaded", function(event) {
+            viewer = $3Dmol.createViewer("viewer", {defaultcolors: $3Dmol.rasmolElementColors});
+        });
+
+        function renderMoleculeFromSMILES(smiles) {
+            // Clear the existing model
+            viewer.clear();
+
+            // Add new model from SMILES string
+            // Note: 3Dmol.js may require additional steps to convert SMILES to a 3D model
+            // This is a basic example and might need adjustments based on the library's API
+            viewer.addModel(smiles, "smiles");
+            viewer.zoomTo();
+            viewer.setStyle({}, {"stick": {}});
+            viewer.render();
+        }
+
+        // Expose the render function to the global window object for Dash to access
+        window.renderMoleculeFromSMILES = renderMoleculeFromSMILES;
+    </script>
+</body>
+</html>

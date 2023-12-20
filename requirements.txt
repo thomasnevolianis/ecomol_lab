@@ -4,3 +4,4 @@ plotly
 seaborn
 rdkit-pypi
 lightgbm
+dash-bootstrap-components

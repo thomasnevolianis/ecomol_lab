@@ -21,7 +21,7 @@ def process_results():
             "smiles": smiles,
             "solubility": round(random.random(),1),  # Random property value
             "score": random.randint(0, 100),  # Initial random score
-            "reactivity": get_reactivity_label(smiles),
+            "reactivity": 1, #get_reactivity_label(smiles),
             "synthetic_accessibility": calculateSAForSmiles(smiles),
             # TODO adjust to database and if it does not exist set it to "-"
             "cas": get_cas(smiles),

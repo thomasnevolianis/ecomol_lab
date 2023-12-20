@@ -1,25 +1,29 @@
 from dash import html, dcc
+import dash_bootstrap_components as dbc
+from dash import html
 
+# layout for the login page
+# Define the layout for the login page
 login_layout = html.Div([
-    # Header
-    html.Header([
-        html.Img(src='/assets/logo.png', className='logo', style={'width': '100px', 'height': 'auto'}),
-        html.H1("EcoMol Lab", className="header-title")
-    ], style={'display': 'flex', 'alignItems': 'center', 'justifyContent': 'center'}, className="app-header"),
-
-    # Main login container
+    # Header with logo and title
     html.Div([
-        html.H2("EcoMol Lab Login", className="login-title"),
+        html.Img(src='/assets/logo.png', style={'width': '150px', 'height': 'auto', 'marginBottom': '20px'}),
+        html.H1("EcoMol Lab", style={'color': '#007bff'})
+    ], className='login-header'),
+
+    # Main login form container
+    html.Div([
+        html.H2("Login", style={'marginBottom': '20px', 'color': '#333'}),
         dcc.Input(id='username-input', type='text', placeholder='Username', className='login-input'),
         dcc.Input(id='password-input', type='password', placeholder='Password', className='login-input'),
         html.Button('Login', id='login-button', n_clicks=0, className='login-button'),
         html.Div(id='login-output', className='login-output')
-    ], className='login-container', style={'textAlign': 'center', 'marginTop': '50px', 'marginBottom': '50px'}),
-    html.H2("Unlock the true potential of molecular engineering"),
-    html.H3("Ask for a demo now at info@habersolutions.com"),
+    ], className='login-form'),
+
     # Footer
-    html.Footer("© 2023 HABER Solutions - All rights reserved", className="app-footer", style={'textAlign': 'center'})
-], className='login-page')
+    html.Div("© 2023 HABER Solutions - All rights reserved", className='login-footer')
+], className='login-container')
+
 
 
 layout = html.Div([

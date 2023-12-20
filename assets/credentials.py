@@ -1,4 +1,3 @@
 USERS = {
-    'haber': 'ecomol',
-    'user2': 'password2'
+    'admin': 'ecomol',
 }
